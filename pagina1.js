@@ -14,7 +14,7 @@ function guardar() {
 
   localStorage.setItem("nombre", nombre);   // guarda en la bodega
   localStorage.setItem("ciudad", ciudad);   // Reto 1
- window.location.href = "pagina2.html";      // cambia de página
+  window.location.href = "pagina2.html";      // cambia de página
 }
 
 // Evento: al hacer clic en el botón, se ejecuta guardar
