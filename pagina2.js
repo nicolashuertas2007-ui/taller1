@@ -1,7 +1,7 @@
 // Función: lee el nombre y la ciudad y los muestra
 function mostrarNombre() {
- const nombre = sessionStorage.getItem("nombre");
- const ciudad = sessionStorage.getItem("ciudad");
+ const nombre =  localStorage.getItem("nombre");
+ const ciudad =  localStorage.getItem("ciudad");
  const saludo = document.getElementById("saludo");
 
  const hayNombre = nombre !== null && nombre !== "";
@@ -20,13 +20,13 @@ function mostrarNombre() {
 
 // Función: borra SOLO el nombre y vuelve a mostrar el resultado
 function borrar() {
- sessionStorage.removeItem("nombre");
+  localStorage.removeItem("nombre");
  mostrarNombre();
 }
 
 // Reto 4: borra todo lo que haya en sessionStorage
 function limpiarTodo() {
- sessionStorage.clear();
+  localStorage.clear();
  mostrarNombre();
 }
 
