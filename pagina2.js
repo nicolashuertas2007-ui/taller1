@@ -4,16 +4,21 @@ function mostrarNombre() {
  const ciudad = sessionStorage.getItem("ciudad");
  const saludo = document.getElementById("saludo");
 
- if (nombre === null) {
-  saludo.textContent = `No hay ningún nombre guardado. ciudad: ${ciudad}`;   
- } else if (ciudad === null || ciudad === "") {
+ const hayNombre = nombre !== null && nombre !== "";
+ const hayCiudad = ciudad !== null && ciudad !== "";
+
+ if (hayNombre && hayCiudad) {
+  saludo.textContent = "Hola, " + nombre + ", de " + ciudad;
+ } else if (hayNombre) {
   saludo.textContent = "Hola, " + nombre;
+ } else if (hayCiudad) {
+  saludo.textContent = "Hola, de " + ciudad;
  } else {
-  saludo.textContent = "Hola, " + nombre + ", de " + ciudad;   // Reto 1
+  saludo.textContent = "No hay ningún nombre guardado.";
  }
 }
 
-// Función: borra el nombre (y la ciudad) y vuelve a mostrar el resultado
+// Función: borra SOLO el nombre y vuelve a mostrar el resultado
 function borrar() {
  sessionStorage.removeItem("nombre");
  mostrarNombre();
