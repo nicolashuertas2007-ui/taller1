@@ -12,8 +12,8 @@ function guardar() {
     return;
     }
 
- sessionStorage.setItem("nombre", nombre);   // guarda en la bodega
- sessionStorage.setItem("ciudad", ciudad);   // Reto 1
+  localStorage.setItem("nombre", nombre);   // guarda en la bodega
+  localStorage.setItem("ciudad", ciudad);   // Reto 1
  window.location.href = "pagina2.html";      // cambia de página
 }
 
