@@ -4,13 +4,6 @@ function guardar() {
  const ciudad = document.getElementById("ciudad").value.trim();
 
  // Reto 2: si el nombre está vacío, no guardar y avisar
- if (nombre === "") {
-  document.getElementById("mensaje").textContent = "Por favor escribe tu nombre.";
-  return;
- }else if (ciudad === "") {
-    document.getElementById("mensaje").textContent = "Por favor escribe tu ciudad.";
-    return;
-    }
 
   localStorage.setItem("nombre", nombre);   // guarda en la bodega
   localStorage.setItem("ciudad", ciudad);   // Reto 1
