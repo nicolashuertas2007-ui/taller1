@@ -7,7 +7,10 @@ function guardar() {
  if (nombre === "") {
   document.getElementById("mensaje").textContent = "Por favor escribe tu nombre.";
   return;
- }
+ }else if (ciudad === "") {
+    document.getElementById("mensaje").textContent = "Por favor escribe tu ciudad.";
+    return;
+    }
 
  sessionStorage.setItem("nombre", nombre);   // guarda en la bodega
  sessionStorage.setItem("ciudad", ciudad);   // Reto 1
